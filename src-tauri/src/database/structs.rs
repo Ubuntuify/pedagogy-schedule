@@ -1,4 +1,4 @@
-use surrealdb_types::{RecordId, SurrealValue, Value};
+use surrealdb::types::{RecordId, SurrealValue, Wrapper};
 
 #[derive(Debug, SurrealValue)]
 pub struct Class {
@@ -13,9 +13,10 @@ pub struct Student {
     classes: Vec<Class>,
 }
 
-#[derive(Debug, SurrealValue)]
+#[derive(SurrealValue)]
 pub struct Schedule {
-    num_of_time_slots: u32,
+    weekday: Wrapper<chrono::Weekday>,
+    start_times: Vec<Wrapper<chrono::NaiveTime>>,
 }
 
 #[derive(Debug, SurrealValue)]

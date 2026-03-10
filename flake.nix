@@ -42,10 +42,10 @@
             # Graphics dependencies
             libGL
             mesa
-            xorg.libX11
-            xorg.libXcursor
-            xorg.libXrandr
-            xorg.libXi
+            libX11
+            libXcursor
+            libXrandr
+            libXi
 
             # Build tools
             gcc

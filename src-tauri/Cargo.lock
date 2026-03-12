@@ -3847,7 +3847,6 @@ dependencies = [
  "serde",
  "serde_json",
  "surrealdb",
- "surrealdb-types 3.0.2",
  "tauri",
  "tauri-build",
  "tauri-plugin-opener",
@@ -5724,8 +5723,8 @@ dependencies = [
  "serde",
  "serde_json",
  "surrealdb-core",
- "surrealdb-types 3.1.0-alpha",
- "surrealdb-types-derive 3.1.0-alpha",
+ "surrealdb-types",
+ "surrealdb-types-derive",
  "tokio",
  "tokio-tungstenite",
  "tokio-tungstenite-wasm",
@@ -5810,7 +5809,7 @@ dependencies = [
  "strsim",
  "subtle",
  "surrealdb-protocol",
- "surrealdb-types 3.1.0-alpha",
+ "surrealdb-types",
  "surrealmx",
  "sysinfo",
  "tempfile",
@@ -5854,32 +5853,6 @@ dependencies = [
 
 [[package]]
 name = "surrealdb-types"
-version = "3.0.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "47ff6e65d183500794b407cd650ca92143ec1980c8dd7fc99f3ffbaef6be14ff"
-dependencies = [
- "anyhow",
- "bytes",
- "chrono",
- "flatbuffers",
- "geo 0.32.0",
- "hex",
- "http",
- "papaya",
- "rand 0.8.5",
- "regex",
- "rstest",
- "rust_decimal",
- "serde",
- "serde_json",
- "surrealdb-protocol",
- "surrealdb-types-derive 3.0.2",
- "ulid",
- "uuid",
-]
-
-[[package]]
-name = "surrealdb-types"
 version = "3.1.0-alpha"
 source = "git+https://github.com/surrealdb/surrealdb#0597a96c4eb3f933bf42f1d5f4a7d5c23e7a6bb2"
 dependencies = [
@@ -5898,20 +5871,9 @@ dependencies = [
  "serde",
  "serde_json",
  "surrealdb-protocol",
- "surrealdb-types-derive 3.1.0-alpha",
+ "surrealdb-types-derive",
  "ulid",
  "uuid",
-]
-
-[[package]]
-name = "surrealdb-types-derive"
-version = "3.0.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "78dcd6796474fbb368e502b98c47843ec28d32c3e1a42d1291d65f060f30b1e8"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.117",
 ]
 
 [[package]]

@@ -1,28 +1,33 @@
 use surrealdb::types::{RecordId, SurrealValue, Wrapper};
 
 #[derive(Debug, SurrealValue)]
+pub struct Record {
+    id: RecordId,
+}
+
+#[derive(Debug, SurrealValue)]
 pub struct Class {
-    friendly_name: String,
-    description: String,
+    pub friendly_name: String,
+    pub description: String,
 }
 
 #[derive(Debug, SurrealValue)]
 pub struct Student {
-    id: RecordId,
-    full_name: String,
-    classes: Vec<Class>,
+    pub id: RecordId,
+    pub full_name: String,
+    pub classes: Vec<Class>,
 }
 
 #[derive(SurrealValue)]
 pub struct Schedule {
-    weekday: Wrapper<chrono::Weekday>,
-    start_times: Vec<Wrapper<chrono::NaiveTime>>,
+    pub weekday: Wrapper<chrono::Weekday>,
+    pub start_times: Vec<Wrapper<chrono::NaiveTime>>,
 }
 
 #[derive(Debug, SurrealValue)]
 pub struct AttendenceRecord {
-    student: Student,
-    state: Attendence,
+    pub student: Student,
+    pub state: Attendence,
 }
 
 #[derive(Debug, SurrealValue)]
